@@ -1,0 +1,41 @@
+.about-content{
+    width: 100%;
+    color: white;
+}
+
+.about-name{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 200px;
+    mix-blend-mode: difference;
+}
+
+.about-name-span{
+    font-size: 10.8vw;
+    font-family: 'Rubik Mono One';
+}
+
+.about-first-pic{
+    width: 100%;
+}
+
+.about-first-pic-img{
+    width: 92%;
+    padding-top: 500px;
+}
+
+.about-desc{
+    width: 60%;
+    text-align: start;
+    margin: auto;
+    font-size: 50px;
+    margin-top: 200px;
+    font-family: 'Rubik';
+    padding-bottom: 300px;
+}
+
+.about-desc-title{
+    font-size: 28px;
+}

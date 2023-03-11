@@ -1,0 +1,12 @@
+#three-bg-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#three-bg-canvas{
+    height: 100%;
+    width: 100% !important;
+}
