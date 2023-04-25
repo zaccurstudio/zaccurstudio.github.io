@@ -37,7 +37,8 @@ const About = () => {
                     about me
                 </p>
                 <span>
-                I am a music producer and sound engineer with a diverse portfolio of work, including the production of the 'GVO SESSIONS TAPE, Vol.1' mixtape and the mixing and production of music for numerous Chinese rap artists. With a deep understanding of both the technical and creative aspects of music production, I am dedicated to creating powerful, polished, and dynamic tracks that resonate with listeners.
+                Zaccur is a multi-talented music producer, DJ, and executive producer based in New York who specializes in creating Hip-hop, R&B, and instrumental music. He is skilled in instrumental production, recording, mixing, and mastering, and has collaborated with many upcoming artists while creating his own music at the same time.
+In addition to his producing work, Zaccur has also performed as an opening act for major artists such as French Montana and 王以太. His music is characterized by infectious beats, innovative sound design, and captivating melodies that blend elements of Hip-hop and R&B with his own unique style.
                 </span>
             </div>
         </div>

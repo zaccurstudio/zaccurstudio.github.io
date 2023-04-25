@@ -2,3 +2,7 @@
     width: 100%;
     padding-top: 200px;
 }
+
+#step-pick-appointment{
+    background: hsla(0,0%,100%,.1) !important;
+}

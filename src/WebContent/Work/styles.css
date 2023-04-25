@@ -1,0 +1,49 @@
+.work-content{
+    padding-top: 180px;
+    padding-bottom: 180px;
+    color: white;
+}
+
+.work-object{
+    padding: 50px;
+    width: 50%;
+    margin:auto;
+    border-top: 1px solid white;
+}
+
+.work-object-title{
+    margin-top: 0;
+    font-family: 'Rubik Mono One';
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.text-shadow {
+    margin-bottom: 40px;
+	text-transform: uppercase;
+    font-family: 'Rubik Mono One';
+	color: transparent;
+	-webkit-text-stroke: #fff;
+	-webkit-text-stroke-width: 1px;
+    font-size: 30px;
+	text-shadow: 2px 2px 10px white;
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+	letter-spacing: 0.2em;
+	animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.text-shadow:hover {
+    color: #fff;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0.5;
+		text-shadow: 2px 2px 10px white;
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 2px 2px 20px white;
+	}
+}

@@ -37,11 +37,18 @@
 .header-menu-item{
     z-index: 2;
     cursor: pointer;
-    padding-top: 50px;
-    margin-left: 18%;
+    padding-top: 90px;
+    margin-left: 12%;
 }
 
 .header-menu-item:hover{
     color: #ffee10;
     text-shadow: 0 0 5px #ffee10;
+}
+
+.header-logo-video{
+    height: 400px;
+    position: relative;
+    top: -150px;
+    left: -20px;
 }
