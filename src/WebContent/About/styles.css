@@ -1,41 +1,66 @@
-.about-content{
+.about-content {
     width: 100%;
     color: white;
 }
 
-.about-name{
+.about-name {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 180px;
+    padding-top: 320px;
     mix-blend-mode: difference;
 }
 
-.about-name-span{
+.about-name-span {
     font-size: 10.8vw;
     font-family: 'Rubik Mono One';
 }
 
-.about-first-pic{
+.about-first-pic {
     width: 100%;
 }
 
-.about-first-pic-img{
+.about-first-pic-img {
     width: 92%;
     padding-top: 500px;
 }
 
-.about-desc{
+.about-desc {
     width: 60%;
     text-align: start;
     margin: auto;
-    font-size: 50px;
+    font-size: 35px;
     margin-top: 200px;
     font-family: 'Rubik';
-    padding-bottom: 300px;
+    padding-bottom: 200px;
+    position: relative;
 }
 
-.about-desc-title{
+.about-desc-title {
     font-size: 35px;
+    z-index: 10;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+.about-desc-body {
+    z-index: 10;
+    position: relative;
+    mix-blend-mode: difference;
+    background: rgba(156, 156, 156, 0.1);
+}
+
+.float-1 {
+    position: absolute;
+    top: 120px;
+    left: -150px;
+    width: 360px;
+}
+
+.float-2{
+    position: absolute;
+    top: -50px;
+    right: -150px;
+    width: 360px;
 }

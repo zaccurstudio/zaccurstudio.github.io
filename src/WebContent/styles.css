@@ -1,54 +1,145 @@
-.content-container{
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+body{
+  cursor: none;
 }
 
-.content-header{
-    z-index: 2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    color: white;
-    mix-blend-mode: difference;
+.content-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-.header-logo{
-    font-family: 'Rubik Mono One';
-    width: 20%;
-    padding: 50px 30px;
-    font-size: 20px;
+.content-header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  color: white;
+  mix-blend-mode: difference;
+  flex-direction: column;
 }
 
-.header-menu{
-    width: 80%;
-    display: flex;
-    font-family: 'Rubik';
-    align-items: flex-start;
-    font-size: 20px;
+.content-header-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0) 100%);
 }
 
-.header-menu-item{
-    z-index: 2;
-    cursor: pointer;
-    padding-top: 90px;
-    margin-left: 12%;
+.header-logo {
+  font-family: 'Rubik Mono One';
+  width: 100%;
+  padding: 50px 0;
+  height: 100px;
+  font-size: 20px;
 }
 
-.header-menu-item:hover{
-    color: #ffee10;
-    text-shadow: 0 0 5px #ffee10;
+.header-menu {
+  width: 100%;
+  display: flex;
+  font-family: 'Rubik';
+  align-items: flex-start;
+  font-size: 20px;
+  justify-content: center;
 }
 
-.header-logo-video{
-    height: 400px;
-    position: relative;
-    top: -150px;
-    left: -20px;
+.header-menu-item {
+  z-index: 2;
+  cursor: pointer;
+  padding-top: 30px;
+  margin: 0 6%;
+  width: 140px;
+}
+
+.header-logo-video {
+  height: 400px;
+  position: relative;
+  top: -150px;
+}
+
+.content-footer {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.header-menu-item {
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+}
+
+.header-menu-item>span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.header-menu-item>span:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.content-background {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+}
+
+.content-background-img {
+  width: 100%;
+}
+
+.iframe-container {
+  position: absolute;
+  top: 41.2%;
+  left: 38%;
+  height: 21%;
+  width: 23.6%;
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball > svg > circle {
+  fill: #f7f8fa;
+}
+
+.moving-board{
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }

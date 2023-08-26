@@ -1,0 +1,17 @@
+.share-icon{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.share-icon-img{
+    height: 50px;
+    width: 50px;
+}
+
+.share-icon-name{
+    margin-left: 10px;
+    font-size: 30px;
+}

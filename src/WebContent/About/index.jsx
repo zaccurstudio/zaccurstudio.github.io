@@ -36,10 +36,12 @@ const About = () => {
                 <p className="about-desc-title">
                     about me
                 </p>
-                <span>
+                <span className="about-desc-body">
                 Zaccur is a multi-talented music producer, DJ, and executive producer based in New York who specializes in creating Hip-hop, R&B, and instrumental music. He is skilled in instrumental production, recording, mixing, and mastering, and has collaborated with many upcoming artists while creating his own music at the same time.
 In addition to his producing work, Zaccur has also performed as an opening act for major artists such as French Montana and 王以太. His music is characterized by infectious beats, innovative sound design, and captivating melodies that blend elements of Hip-hop and R&B with his own unique style.
                 </span>
+                <img className="float-1" src="/images/studio2.jpg"/>
+                <img className="float-2" src="/images/studio3.jpg"/>
             </div>
         </div>
     )
