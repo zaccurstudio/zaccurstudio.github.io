@@ -64,3 +64,19 @@
     right: -150px;
     width: 360px;
 }
+
+.carousel-container{
+    width: 1000px;
+    margin: auto;
+}
+
+.carousel-image{
+    height: 700px;
+    width: 1000px;
+}
+
+.carousel-image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

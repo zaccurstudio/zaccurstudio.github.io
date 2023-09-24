@@ -113,10 +113,10 @@ body{
 
 .iframe-container {
   position: absolute;
-  top: 41.2%;
+  top: 44.3%;
   left: 38%;
-  height: 21%;
-  width: 23.6%;
+  height: 22.2%;
+  width: 23.7%;
 }
 
 .cursor {
@@ -142,4 +142,73 @@ body{
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+.click-animation-container{
+  position: absolute;
+  left:240px;
+  top:340px;
+  height: 64px;
+  width: 64px;
+  transform: rotate(45deg);
+}
+
+.click-animation{
+  height: 100%;
+  width: 100%;
+  background-image:url("Assets/click-icon.png");
+  background-blend-mode:screen;
+  animation: flowing 2s ease-in-out infinite alternate;
+}
+
+.click-box-1{
+  position: absolute;
+  left: 270px;
+  top: 320px;
+  width: 50px;
+  height: 60px;
+  z-index: 100;
+}
+
+.custom-modal{
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border: 1px solid #4ef542;
+  background-color: black;
+  color: white;
+  z-index: 500;
+  animation: fadeIn 1s;
+}
+
+.modal-close-icon{
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: #4ef542;
+}
+
+@keyframes flowing {
+	0% {
+		transform: translateY(0);
+	}
+  50%{
+    transform: translateY(20px);
+  }
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
