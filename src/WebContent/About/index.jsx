@@ -49,19 +49,16 @@ In addition to his producing work, Zaccur has also performed as an opening act f
             <div className="carousel-container">
                 <Carousel>
                     <div className="carousel-image">
-                        <img src="images/studio/InFrontType1.png" />
+                        <img src="images/studio/show1.jpg" />
                     </div>
                     <div className="carousel-image">
-                        <img src="images/studio/Desk.png" />
+                        <img src="images/studio/show2.jpg" />
                     </div>
                     <div className="carousel-image">
-                        <img src="images/studio/CanvasSign.png" />
+                        <img src="images/studio/show3.jpg" />
                     </div>
                     <div className="carousel-image">
-                        <img src="images/studio/BoothMic.png" />
-                    </div>
-                    <div className="carousel-image">
-                        <img src="images/studio/BoothOutside.png" />
+                        <img src="images/studio/show4.jpg" />
                     </div>
                 </Carousel>
             </div>

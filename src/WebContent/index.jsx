@@ -46,21 +46,15 @@ const WebContent = () => {
     return (
         <div className="content-container">
             {selectState === 'WORK' && <div className="content-background">
-                <img className="content-background-img" src="/images/homebg.jpg" />
+                <img className="content-background-img" src="/images/homebg.png" />
                 <div className="iframe-container">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1je9U5IclcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div className="click-animation-container">
-                    <div className="click-animation" />
-                </div>
-                <div className="click-box-1" onClick={()=>setIsModalOpen(true)}>
                 </div>
                 {isModalOpen && <div className="custom-modal">
                     <div className="modal-close-icon" onClick={()=>setIsModalOpen(false)}>
                         X
                     </div>
                     <div className="modal-content">
-                    Zaccur, a gifted sound engineer, discovers the Sirenum Sonata, an ancient instrument with the power to manipulate emotions through music. Obsessed with its power, he descends into villainy, using the instrument to control people's feelings and amass an army of followers. A group of heroes opposes him in a climactic showdown, leading to his redemption and the destruction of the artifact. Zaccur, once a villain, dedicates his life to using his musical talents for the greater good, reminding us of the enduring power of music.
                     </div>
                 </div>}
             </div>}

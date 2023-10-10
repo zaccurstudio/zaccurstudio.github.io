@@ -1,9 +1,10 @@
 :root {
-	--glow: rgba(255, 195, 26, 0.4);
+	--glow: rgba(255, 255, 255, 0.4);
   }
 
 #work-content{
     color: white;
+	position: relative;
 }
 
 .work-object{
@@ -39,13 +40,24 @@
     color: #fff;
 }
 
+.carousel-video{
+	height: 380px;
+	width: 70%;
+	margin:auto;
+}
+
+.video-carousel-container{
+	width: 70%;
+	margin:auto;
+}
+
 .hexagon {
 	z-index: -2;
 	position: absolute;
-	width: 200px;
-	height: 150px;
+	width: 267px;
+	height: 200px;
 	background-color: var(--glow);
-	margin: 46.19px 0;
+	margin: 55.3px 0;
 	filter: blur(20px);
   }
   .hexagon:before,
@@ -55,21 +67,21 @@
 	left: 50%;
     transform: translateX(-50%);
 	width: 0;
-	border-left: 80px solid transparent;
-	border-right: 80px solid transparent;
+	border-left: 106px solid transparent;
+	border-right: 106px solid transparent;
   }
   .hexagon:before {
 	bottom: 100%;
-	border-bottom: 46.19px solid  var(--glow);
+	border-bottom: 55.3px solid  var(--glow);
   }
   .hexagon:after {
 	top: 100%;
 	width: 0;
-	border-top: 46.19px solid  var(--glow);
+	border-top: 55.3px solid  var(--glow);
   }
   .back {
-	height: 15rem;
-	width: 15rem;
+	height: 20rem;
+	width: 20rem;
 	position:absolute;
 	top:0;
 	left:0;
@@ -79,8 +91,8 @@
 	z-index: -1;
   }
   .top {
-	height: 15rem;
-	width: 15rem;
+	height: 20rem;
+	width: 20rem;
 	position:absolute;
 	top:0;
 	left:0;
@@ -90,8 +102,8 @@
 	z-index: 1;
   }
   .left {
-	height: 15rem;
-	width: 15rem;
+	height: 20rem;
+	width: 20rem;
 	position:absolute;
 	top:0;
 	left:0;
@@ -101,8 +113,8 @@
 	z-index: 1;
   }
   .right {
-	height: 15rem;
-	width: 15rem;
+	height: 20rem;
+	width: 20rem;
 	position:absolute;
 	top:0;
 	left:0;
@@ -111,6 +123,13 @@
 	background-position: center;
 	z-index: 1;
   }
+  .track-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  }
   #cube {
 	margin: auto;
 	margin-top: 120px;
@@ -118,13 +137,46 @@
 	animation: hover 1.5s ease-in-out infinite alternate;
 	transition: transform 300ms;
 	animation-play-state: running;
-	height: 15rem;
-	width: 15rem;
+	height: 20rem;
+	width: 20rem;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
   }
+  .cube-overlay{
+	margin: auto;
+	animation: hover 1.5s ease-in-out infinite alternate;
+	transition: transform 300ms;
+	animation-play-state: running;
+	height: 20rem;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	pointer-events: none;
+  }
+.track-overlay{
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.track-title{
+	font-size: 25px;
+}
+.track-title:hover{
+	text-decoration: underline;
+}
+
   @keyframes hover {
 	from {
 	  transform: translateY(-0.5rem);
@@ -134,14 +186,14 @@
 	}
   }
   .powerup {
-	background-image: url("ms/enrama.jpg");
-	background-size: cover;
 	border-radius: 50%;
 	z-index: 100;
 	overflow: hidden;
-	height: 48px;
-	width: 48px;
-	z-index: -5;
+	height: 200px;
+	width: 200px;
+	z-index: 100;
+	position: relative;
+	pointer-events: all;
   }
 
 @keyframes flicker {
