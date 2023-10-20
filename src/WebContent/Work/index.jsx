@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
+import { isMobile } from "react-device-detect";
 import './styles.css';
 
 const transitionTime = "750ms";
@@ -9,6 +10,7 @@ const trackList = [{ "track": "/tracks/1.mp3", "cover": "/covers/1.jpg", "name":
 { "track": "/tracks/3.mp3", "cover": "/covers/3.jpg", "name": "Unreleased", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
 { "track": "/tracks/4.mp3", "cover": "/covers/4.jpg", "name": "Unreleased", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
 { "track": "/tracks/5.mp3", "cover": "/covers/5.png", "name": "#20", "link": "https://open.spotify.com/track/5JxQXLbFbHivjtDWwCbFva?si=7cbcbc01c6fb4e4e" },
+{ "track": "/tracks/6.mp3", "cover": "/covers/6.jpg", "name": "Unreleased", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
 ];
 var audio;
 
@@ -100,16 +102,36 @@ const Work = () => {
     return (
         <div id="work-content">
             <div className="video-carousel-container">
-                <Carousel showThumbs={false}>
+                <Carousel renderArrowPrev={(clickHandler, hasPrev, labelPrev) =>
+                    hasPrev && (
+                        <div style={{position: "absolute", left: "0", top: "50%", transform: "translateY(-50%)", zIndex: 100}} onClick={clickHandler}>
+                            <img
+                                style={{ height: "50px", width: "50px" }}
+                                src={'/images/left-icon.png'} />
+                        </div>
+                    )
+                }
+                    renderArrowNext={(clickHandler, hasNext, labelNext) =>
+                        hasNext && (
+                            <div style={{position: "absolute", right: "0", top: "50%", transform: "translateY(-50%)", zIndex: 100}} onClick={clickHandler}>
+                                <img
+                                    style={{ height: "50px", width: "50px" }}
+                                    src={'/images/right-icon.png'} />
+                            </div>
+                        )
+                    } showThumbs={false}>
                     <div className="carousel-video">
-                        <iframe width="560" height="380" src="https://www.youtube.com/embed/9h0CrekIZqQ?si=wZ6dslWsLtJzwrrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="540" height="450" src="https://www.youtube.com/embed/9h0CrekIZqQ?si=wZ6dslWsLtJzwrrX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div className="carousel-video">
-                        <iframe width="560" height="380" src="https://www.youtube.com/embed/TkaxhRkJlSQ?si=2JOPrqTF5D1hHSVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="540" height="450" src="https://www.youtube.com/embed/TkaxhRkJlSQ?si=2JOPrqTF5D1hHSVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div className="carousel-video">
+                        <iframe width="540" height="450" src="https://www.youtube.com/embed/DMu7x0aGDRo?si=1E8_bne7CtyLQXHB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </Carousel>
             </div>
-            <div id="cube" ref={cubeRef} onClick={cubeOnClick}>
+            <div id="cube" ref={cubeRef} onClick={cubeOnClick} onTouchEnd={cubeOnClick}>
                 <div class="hexagon absolute" ref={glowRef}></div>
                 <div class="cube back h-40 w-40 absolute top-0 left-0" ref={cbackRef}></div>
                 <div class="cube top h-40 w-40 absolute top-0 left-0" ref={ctopRef}></div>
@@ -117,7 +139,7 @@ const Work = () => {
                 <div class="cube right h-40 w-40 absolute top-0 left-0" ref={crightRef}></div>
             </div>
             <div className="cube-overlay">
-                <div class="powerup absolute" ref={powerupRef} onMouseEnter={() => setIsTrackHover(true)} onMouseLeave={() => setIsTrackHover(false)}>
+                <div class="powerup absolute" ref={powerupRef} onMouseEnter={() => setIsTrackHover(true)} onMouseLeave={() => setIsTrackHover(false)} onTouchEnd={()=>setIsTrackHover(!isTrackHover)}>
                     <img className="track-bg" src={trackList[selectedTrack].cover} />
                     {isTrackHover && isOpen && <div className="track-overlay">
                         <div className="track-title-container" onClick={onTitleClick}>

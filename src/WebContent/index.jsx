@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import { gsap } from "gsap";
 import About from "./About";
 import Schedule from "./Schedule";
@@ -46,7 +47,7 @@ const WebContent = () => {
     return (
         <div className="content-container">
             {selectState === 'WORK' && <div className="content-background">
-                <img className="content-background-img" src="/images/homebg.png" />
+                <img className="content-background-img" src={isMobile ? "/images/homebg-mobile.png" :"/images/homebg.png"} />
                 <div className="iframe-container">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1je9U5IclcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -58,10 +59,10 @@ const WebContent = () => {
                     </div>
                 </div>}
             </div>}
-            <div className="content-header-background"></div>
+            {selectState === 'WORK' && <div className="content-header-background"></div>}
             <div className="content-header">
                 <div className="header-logo">
-                    <video className="header-logo-video" src="/video/zaccur_spin.mp4" autoPlay loop muted />
+                    <video className="header-logo-video" src="/video/zaccur_spin.mp4" autoPlay loop muted playsInline/>
                 </div>
                 <div className="header-menu">
                     <div className="header-menu-item" onClick={() => setSelectState('WORK')}>
@@ -81,19 +82,21 @@ const WebContent = () => {
                 <ShareIcon shareIconName="Zaccur Studio" shareIconLink={"https://instagram.com/zaccurstudio"} shareIconType="instagram" />
                 <ShareIcon shareIconName="Zaccur" shareIconLink={"https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt"} shareIconType="spotify" />
             </div>
-            <div class="cursor">
-                    <div class="cursor__ball cursor__ball--big" ref={bigBallRef}>
-                        <svg height="30" width="30">
-                            <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-                        </svg>
-                    </div>
-
-                    <div class="cursor__ball cursor__ball--small" ref={smallBallRef}>
-                        <svg height="10" width="10">
-                            <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-                        </svg>
-                    </div>
+            {
+                !isMobile && <div class="cursor">
+                <div class="cursor__ball cursor__ball--big" ref={bigBallRef}>
+                    <svg height="30" width="30">
+                        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+                    </svg>
                 </div>
+
+                <div class="cursor__ball cursor__ball--small" ref={smallBallRef}>
+                    <svg height="10" width="10">
+                        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+                    </svg>
+                </div>
+            </div>
+            }
         </div>
     )
 }

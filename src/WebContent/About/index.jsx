@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import { isMobile } from "react-device-detect";
 import './styles.css';
 
 const About = () => {
@@ -15,8 +16,9 @@ const About = () => {
     })
 
     const handleScroll = () => {
-        if (window.scrollY > 300){
-            const alpha = (window.scrollY - 300) * 10 / 7;
+        const length = isMobile ? 200 : 300;
+        if (window.scrollY > length){
+            const alpha = (window.scrollY - length) * 10 / 7;
             if (alpha < 1000) {
                 const opacity = 1 - alpha/1000;
                 nameRef.current.style.opacity = opacity; 
@@ -49,16 +51,16 @@ In addition to his producing work, Zaccur has also performed as an opening act f
             <div className="carousel-container">
                 <Carousel>
                     <div className="carousel-image">
-                        <img src="images/studio/show1.jpg" />
-                    </div>
-                    <div className="carousel-image">
-                        <img src="images/studio/show2.jpg" />
-                    </div>
-                    <div className="carousel-image">
                         <img src="images/studio/show3.jpg" />
                     </div>
                     <div className="carousel-image">
                         <img src="images/studio/show4.jpg" />
+                    </div>
+                    <div className="carousel-image">
+                        <img src="images/studio/show1.jpg" />
+                    </div>
+                    <div className="carousel-image">
+                        <img src="images/studio/show2.jpg" />
                     </div>
                 </Carousel>
             </div>
