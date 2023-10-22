@@ -219,9 +219,9 @@ body{
     position: relative;
     height: fit-content;
     width: 100vw;
-    padding-top: 20vh;
+    padding-top: 30vh;
     margin-bottom: 60px;
-    height: 70vh;
+    height: 50vh;
   }  
   .content-background-img{
     height: auto;
@@ -229,10 +229,10 @@ body{
   }
   .iframe-container {
     position: absolute;
-    top: 53.5%;
-    left: 22.8%;
-    height: 16.5%;
-    width: 55.3%;
+    top: 42.5%;
+    left: 20.2%;
+    height: 19.6%;
+    width: 59.3%;
   }
   .video-carousel-container{
     width: 100% !important;
