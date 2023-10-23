@@ -206,3 +206,67 @@
 		text-shadow: 2px 2px 20px white;
 	}
 }
+
+@media only screen and (max-width: 768px) {
+	.hexagon {
+		z-index: -2;
+		position: absolute;
+		width: 213px;
+		height: 160px;
+		background-color: var(--glow);
+		margin: 44.2px 0;
+		filter: blur(20px);
+	  }
+	  .hexagon:before,
+	  .hexagon:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		border-left: 106px solid transparent;
+		border-right: 106px solid transparent;
+	  }
+	  .hexagon:before {
+		bottom: 100%;
+		border-bottom: 44.2px solid  var(--glow);
+	  }
+	  .hexagon:after {
+		top: 100%;
+		width: 0;
+		border-top: 44.2px solid  var(--glow);
+	  }
+	  .back {
+		height: 16rem;
+		width: 16rem;
+	  }
+	  .top {
+		height: 16rem;
+		width: 16rem;
+	  }
+	  .left {
+		height: 16rem;
+		width: 16rem;
+	  }
+	  .right {
+		height: 16rem;
+		width: 16rem;
+	  }
+	  #cube {
+		margin: auto;
+		margin-top: 120px;
+		margin-bottom: 120px;
+		height: 16rem;
+		width: 16rem;
+	  }
+	  .cube-overlay{
+		height: 16rem;
+	  }
+	  .powerup {
+		height: 160px;
+		width: 160px;
+	  }
+	  .track-title{
+		font-size: 20px;
+	  }
+}

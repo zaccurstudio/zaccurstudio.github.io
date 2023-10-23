@@ -72,8 +72,8 @@ const Work = () => {
             powerupRef.current.style.opacity = 1;
             setIsOpen(true);
             cubeRef.current.style.animationPlayState = "paused";
-            powerupRef.current.style.height = "200px";
-            powerupRef.current.style.width = "200px";
+            powerupRef.current.style.height = isMobile ? "160px" : "200px";
+            powerupRef.current.style.width = isMobile ? "160px" : "200px";
             audio = new Audio(trackList[selectedNumber].track);
             audio.play();
         } else {
@@ -89,8 +89,8 @@ const Work = () => {
             glowRef.current.style.opacity = 1;
             powerupRef.current.style.opacity = 0;
             cubeRef.current.style.animationPlayState = "running";
-            powerupRef.current.style.height = "48px";
-            powerupRef.current.style.width = "48px";
+            powerupRef.current.style.height = "42px";
+            powerupRef.current.style.width = "42px";
             audio.pause();
         }
     }
@@ -131,7 +131,7 @@ const Work = () => {
                     </div>
                 </Carousel>
             </div>
-            <div id="cube" ref={cubeRef} onClick={cubeOnClick} onTouchEnd={cubeOnClick}>
+            <div id="cube" ref={cubeRef} onClick={!isMobile ? cubeOnClick : ()=>{}} onTouchEnd={cubeOnClick}>
                 <div class="hexagon absolute" ref={glowRef}></div>
                 <div class="cube back h-40 w-40 absolute top-0 left-0" ref={cbackRef}></div>
                 <div class="cube top h-40 w-40 absolute top-0 left-0" ref={ctopRef}></div>
