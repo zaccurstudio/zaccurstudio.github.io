@@ -3,8 +3,6 @@ import './styles.css';
 
 const ShareIcon = ({shareIconName, shareIconLink, shareIconType}) => {
 
-    console.log("SHARE ICON NAME", shareIconName);
-
     const unhoverImg = shareIconType === 'instagram' ? '/images/insta-static.png' : '/images/logospotify.png';
 
     const [isHovered, setIsHovered] = useState(false);

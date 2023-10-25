@@ -77,11 +77,11 @@ const WebContent = () => {
                 </div>
             </div>
             {renderContent()}
-            <div className="content-footer">
+            {selectState !== 'SCHEDULE' && <div className="content-footer">
                 <ShareIcon shareIconName="Zaccur Zhu" shareIconLink={"https://instagram.com/zaccurzhu"} shareIconType="instagram" />
                 <ShareIcon shareIconName="Zaccur Studio" shareIconLink={"https://instagram.com/zaccurstudio"} shareIconType="instagram" />
                 <ShareIcon shareIconName="Zaccur" shareIconLink={"https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt"} shareIconType="spotify" />
-            </div>
+            </div>}
             {
                 !isMobile && <div class="cursor">
                 <div class="cursor__ball cursor__ball--big" ref={bigBallRef}>

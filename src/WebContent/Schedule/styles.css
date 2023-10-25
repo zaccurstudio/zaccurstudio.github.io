@@ -6,3 +6,9 @@
 #step-pick-appointment{
     background: hsla(0,0%,100%,.1) !important;
 }
+
+@media only screen and (max-width: 768px) {
+    .schedule-content{
+        padding-top: 240px;
+    }
+}
