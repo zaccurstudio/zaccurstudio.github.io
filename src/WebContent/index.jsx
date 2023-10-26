@@ -13,6 +13,7 @@ const WebContent = () => {
 
     const smallBallRef = useRef(null);
     const bigBallRef = useRef(null);
+    const videoRef = useRef(null);
 
     const renderContent = () => {
         switch (selectState) {
@@ -29,6 +30,9 @@ const WebContent = () => {
 
     useEffect(() => {
         document.body.addEventListener('mousemove', onMouseMove);
+        if (videoRef.current) {
+            videoRef.current.play();
+        }
     }, [])
 
     const onMouseMove = (e) => {
@@ -62,7 +66,7 @@ const WebContent = () => {
             {selectState === 'WORK' && <div className="content-header-background"></div>}
             <div className="content-header">
                 <div className="header-logo">
-                    <video className="header-logo-video" src="/video/zaccur_spin.mp4" autoPlay loop muted playsInline/>
+                    <video className="header-logo-video" src="/video/zaccur_spin.mp4" ref={videoRef} autoPlay loop muted playsInline />
                 </div>
                 <div className="header-menu">
                     <div className="header-menu-item" onClick={() => setSelectState('WORK')}>
