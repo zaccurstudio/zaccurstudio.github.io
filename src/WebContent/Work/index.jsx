@@ -11,6 +11,8 @@ const trackList = [{ "track": "/tracks/1.mp3", "cover": "/covers/1.jpg", "name":
 { "track": "/tracks/4.mp3", "cover": "/covers/4.jpg", "name": "Unreleased", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
 { "track": "/tracks/5.mp3", "cover": "/covers/5.png", "name": "#20", "link": "https://open.spotify.com/track/5JxQXLbFbHivjtDWwCbFva?si=7cbcbc01c6fb4e4e" },
 { "track": "/tracks/6.mp3", "cover": "/covers/6.jpg", "name": "Unreleased", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
+{ "track": "/tracks/7.mp3", "cover": "/covers/7.jpg", "name": "SunShine", "link": "https://open.spotify.com/track/3ygqb5A7cseO1MYaCA6tnn?si=9509d3af0f1d4b6d" },
+{ "track": "/tracks/8.mp3", "cover": "/covers/8.jpg", "name": "06262023", "link": "https://open.spotify.com/artist/60u7aNCfQoXKdp6jgRuIqt" },
 ];
 var audio;
 
